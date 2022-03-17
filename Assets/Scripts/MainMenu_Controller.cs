@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace CS583
 {
-    public class menuScreenController : MonoBehaviour
+    public class MainMenu_Controller : MonoBehaviour
     {
 
         public Button startButton;
@@ -14,7 +14,6 @@ namespace CS583
         public Button settingsButton;
         public Button aboutButton;
         private Button playGameButton;
-        static public bool characterRollDone = false;
 
 
         private void Awake()
@@ -25,7 +24,7 @@ namespace CS583
         private void moreUIReferences()
         {
 
-            ExitButton = GameObject.Find("quitButton").GetComponent<Button>();
+            ExitButton = GameObject.Find("b_Quit").GetComponent<Button>();
             ExitButton.onClick.AddListener(quitButton);
 
             settingsButton = GameObject.Find("b_Settings").GetComponent<Button>();
@@ -42,7 +41,7 @@ namespace CS583
         }
 
 
-        public void gameAbout()
+        public void playGameScene()
         {
             SceneManager.LoadScene(1);
         }
@@ -52,11 +51,11 @@ namespace CS583
             SceneManager.LoadScene(2);
         }
 
-        public void playGameScene()
+
+        public void gameAbout()
         {
             SceneManager.LoadScene(3);
         }
-
         //quit button
         public void quitButton()
         {

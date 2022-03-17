@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainMenu_Controller.cs" />
     <Compile Include="Assets\Scripts\Button_Click_Sound_Play.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
