@@ -26,11 +26,11 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        healthWidth = healthFill.sprite.rect.width;
+        //healthWidth = healthFill.sprite.rect.width;
         startHealth = health;
-        mainText.gameObject.SetActive(true);
-        redOverlay.gameObject.SetActive(true);
-        Invoke("HideTitle", 2);
+        //mainText.gameObject.SetActive(true);
+        //redOverlay.gameObject.SetActive(true);
+        //Invoke("HideTitle", 2);
     }
 
     // Update is called once per frame
