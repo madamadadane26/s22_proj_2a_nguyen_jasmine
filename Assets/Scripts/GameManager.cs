@@ -22,17 +22,17 @@ public class GameManager : MonoBehaviour
         PrepareSpawners();
     }
 
-    //void Awake()
-    //{
-     //   SceneManager.sceneLoaded -= OnSceneLoaded;
-    //    SceneManager.sceneLoaded += OnSceneLoaded;
-     //   DontDestroyOnLoad(player.gameObject);
-     //   DontDestroyOnLoad(weapon.gameObject);
-     //   DontDestroyOnLoad(hudCanvas.gameObject);
-     //   DontDestroyOnLoad(gameObject);
+    void Awake()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        DontDestroyOnLoad(player.gameObject);
+        DontDestroyOnLoad(weapon.gameObject);
+        DontDestroyOnLoad(hudCanvas.gameObject);
+        DontDestroyOnLoad(gameObject);
 
-      //  scene = SceneManager.GetActiveScene();
-   // }
+        scene = SceneManager.GetActiveScene();
+    }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -50,16 +50,6 @@ public class GameManager : MonoBehaviour
         {
             int rnd = Random.Range(0, spawners.Length);
             spawners[rnd].GetComponent<SpawnerScript>().SetGateway(true);
-            // Weapon Upgrade testing
-            if (Random.Range(0, 5) == 3)
-            {
-                int randTemp = Random.Range(0, spawners.Length);
-                spawners[randTemp].GetComponent<SpawnerScript>().SetWeapon(true);
-            }
-            foreach (GameObject spawner in spawners)
-            {
-                spawner.GetComponent<SpawnerScript>().SetHealth(level + Random.Range(3, 6));
-            }
         }
     }
 
@@ -81,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevel()
     {
         enemyCount = 0;
-        if (SceneManager.GetActiveScene().buildIndex != 2)
+        if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             currentScene = 1;
         }

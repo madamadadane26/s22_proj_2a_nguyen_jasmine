@@ -9,8 +9,6 @@ public class WeaponScript : MonoBehaviour
     int degree = 0;
     private float weaponY = -0.2f;
     private float weaponX = .7f;
-    public Sprite[] upgrades;
-    private int spriteIndex = 0;
     public float weaponPower = 1.0f;
 
     Vector3 pos;
@@ -62,14 +60,5 @@ public class WeaponScript : MonoBehaviour
         swing = true;
     }
 
-    public void UpgradeWeapon()
-    {
-        if (spriteIndex < upgrades.Length - 1)
-        {
-            spriteIndex++;
-        }
-        GetComponent<SpriteRenderer>().sprite = upgrades[spriteIndex];
-        weaponPower += 0.4f;
-    }
 
 }

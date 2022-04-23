@@ -14,8 +14,6 @@ public class SpawnerScript : MonoBehaviour
     public Sprite gateway;
     private bool isGateway = false;
 
-    public Sprite weaponUpgrade;
-    private bool isWeaponUpgrade = false;
 
     public Sprite[] sprites;
 
@@ -59,10 +57,7 @@ public class SpawnerScript : MonoBehaviour
                 {
                     Invoke("OpenGateway", 0.5f);
                 }
-                else if (isWeaponUpgrade)
-                {
-                    Invoke("OpenWeapon", 0.5f);
-                }
+
                 else
                 {
                     Invoke("DestroySpawner", 0.6f);
@@ -76,6 +71,7 @@ public class SpawnerScript : MonoBehaviour
     private void OpenGateway()
     {
         GetComponent<SpriteRenderer>().sprite = gateway;
+        gameManager.LoadLevel();
     }
 
     private void DestroySpawner()
@@ -96,28 +92,19 @@ public class SpawnerScript : MonoBehaviour
     public void SetGateway(bool maybe)
     {
         isGateway = maybe;
+
     }
 
-    public void GetGatewayWeapon()
+    public void NextLevel2()
     {
         if (GetComponent<SpriteRenderer>().sprite == gateway)
         {
             gameManager.LoadLevel();
+            Debug.Log("please");
         }
-        else if (GetComponent<SpriteRenderer>().sprite == weaponUpgrade)
-        {
-            GameObject.Find("Weapon").GetComponent<WeaponScript>().UpgradeWeapon();
-            Destroy(gameObject);
-        }
+
     }
 
-    public void SetWeapon(bool maybe)
-    {
-        isWeaponUpgrade = true;
-    }
 
-    private void OpenWeapon()
-    {
-        GetComponent<SpriteRenderer>().sprite = weaponUpgrade;
-    }
+
 }

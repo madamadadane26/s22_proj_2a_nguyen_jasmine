@@ -77,10 +77,7 @@ public class PlayerScript : MonoBehaviour
             healthFill.rectTransform.sizeDelta = temp;
             Invoke("HidePlayerBlood", 0.25f);
         }
-        else if (collision.gameObject.CompareTag("Spawner"))
-        {
-            collision.gameObject.GetComponent<SpawnerScript>().GetGatewayWeapon();
-        }
+
     }
 
     void HidePlayerBlood()
