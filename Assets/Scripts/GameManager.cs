@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevel()
     {
         enemyCount = 0;
-        if (SceneManager.GetActiveScene().buildIndex != 1)
+        if (SceneManager.GetActiveScene().buildIndex != 2)
         {
             currentScene = 1;
         }

@@ -30,7 +30,8 @@ public class PlayerScript : MonoBehaviour
         startHealth = health;
         mainText.gameObject.SetActive(false);
         //redOverlay.gameObject.SetActive(true);
-        //Invoke("HideTitle", 2);
+        //Invoke("HidedeTitle", 2);
+        //Invoke("HidedeTitle", 2);
     }
 
     // Update is called once per frame
@@ -90,10 +91,5 @@ public class PlayerScript : MonoBehaviour
         experience += amount;
         expText.text = experience.ToString();
     }
-
-    //void HideTitle()
-    //{
-     //   mainText.gameObject.SetActive(false);
-    //    redOverlay.gameObject.SetActive(false);
-    //}
 }
+

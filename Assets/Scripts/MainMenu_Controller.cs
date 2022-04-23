@@ -43,18 +43,18 @@ namespace CS583
 
         public void playGameScene()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
 
         public void gameSettings()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
 
 
         public void gameAbout()
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         //quit button
         public void quitButton()
