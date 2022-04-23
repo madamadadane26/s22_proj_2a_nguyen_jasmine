@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawners;
     private int level = 0;
     private int currentScene = 0;
-    private int zombieCount = 0;
-    private int zombieLimit = 10;
+    private int enemyCount = 0;
+    private int enemyLimit = 10;
 
     public GameObject player;
     public GameObject weapon;
@@ -22,17 +22,17 @@ public class GameManager : MonoBehaviour
         PrepareSpawners();
     }
 
-    void Awake()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        DontDestroyOnLoad(player.gameObject);
-        DontDestroyOnLoad(weapon.gameObject);
-        DontDestroyOnLoad(hudCanvas.gameObject);
-        DontDestroyOnLoad(gameObject);
+    //void Awake()
+    //{
+     //   SceneManager.sceneLoaded -= OnSceneLoaded;
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
+     //   DontDestroyOnLoad(player.gameObject);
+     //   DontDestroyOnLoad(weapon.gameObject);
+     //   DontDestroyOnLoad(hudCanvas.gameObject);
+     //   DontDestroyOnLoad(gameObject);
 
-        scene = SceneManager.GetActiveScene();
-    }
+      //  scene = SceneManager.GetActiveScene();
+   // }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -63,24 +63,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetZombieCount(int amount)
+    public void SetEnemyCount(int amount)
     {
-        zombieCount += amount;
+        enemyCount += amount;
     }
 
-    public int GetZombieCount()
+    public int GetEnemyCount()
     {
-        return zombieCount;
+        return enemyCount;
     }
 
-    public int GetZombieLimit()
+    public int GetEnemyLimit()
     {
-        return zombieLimit;
+        return enemyLimit;
     }
 
     public void LoadLevel()
     {
-        zombieCount = 0;
+        enemyCount = 0;
         if (SceneManager.GetActiveScene().buildIndex != 2)
         {
             currentScene = 1;

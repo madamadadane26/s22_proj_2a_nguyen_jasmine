@@ -26,9 +26,9 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //healthWidth = healthFill.sprite.rect.width;
+        healthWidth = healthFill.sprite.rect.width;
         startHealth = health;
-        //mainText.gameObject.SetActive(true);
+        mainText.gameObject.SetActive(false);
         //redOverlay.gameObject.SetActive(true);
         //Invoke("HideTitle", 2);
     }
@@ -60,28 +60,28 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        transform.GetChild(0).gameObject.SetActive(true);
-    //        health -= collision.gameObject.GetComponent<EnemyScript>().GetHitStrength();
-    //        if (health < 1)
-    //        {
-    //            healthFill.enabled = false;
-    //            mainText.gameObject.SetActive(true);
-    //            mainText.text = "Game Over";
-    //            redOverlay.gameObject.SetActive(true);
-    //        }
-    //        Vector2 temp = new Vector2(healthWidth * (health / startHealth), healthFill.sprite.rect.height);
-    //        healthFill.rectTransform.sizeDelta = temp;
-    //        Invoke("HidePlayerBlood", 0.25f);
-    //    }
-    //    else if (collision.gameObject.CompareTag("Spawner"))
-    //    {
-    //        collision.gameObject.GetComponent<SpawnerScript>().GetGatewayWeapon();
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            health -= collision.gameObject.GetComponent<EnemyScript>().GetHitStrength();
+            if (health < 1)
+            {
+                healthFill.enabled = false;
+                mainText.gameObject.SetActive(true);
+                mainText.text = "Game Over";
+                redOverlay.gameObject.SetActive(true);
+            }
+            Vector2 temp = new Vector2(healthWidth * (health / startHealth), healthFill.sprite.rect.height);
+            healthFill.rectTransform.sizeDelta = temp;
+            Invoke("HidePlayerBlood", 0.25f);
+        }
+        else if (collision.gameObject.CompareTag("Spawner"))
+        {
+            collision.gameObject.GetComponent<SpawnerScript>().GetGatewayWeapon();
+        }
+    }
 
     void HidePlayerBlood()
     {
@@ -94,9 +94,9 @@ public class PlayerScript : MonoBehaviour
         expText.text = experience.ToString();
     }
 
-    void HideTitle()
-    {
-        mainText.gameObject.SetActive(false);
-        redOverlay.gameObject.SetActive(false);
-    }
+    //void HideTitle()
+    //{
+     //   mainText.gameObject.SetActive(false);
+    //    redOverlay.gameObject.SetActive(false);
+    //}
 }

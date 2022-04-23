@@ -21,11 +21,11 @@ public class EnemyScript : MonoBehaviour
     private bool isDead = false;
     void Start()
     {
-        //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        //int rnd = Random.Range(0, sprites.Length);
-        //GetComponent<SpriteRenderer>().sprite = sprites[rnd];
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        int rnd = Random.Range(0, sprites.Length);
+        GetComponent<SpriteRenderer>().sprite = sprites[rnd];
         target = GameObject.Find("Player").transform;
-        //health += (0.1f * gameManager.GetLevel());
+        health += (0.1f * gameManager.GetLevel());
     }
 
     void Update()
@@ -87,6 +87,7 @@ public class EnemyScript : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             target.GetComponent<PlayerScript>().GainExperience(100);
             Invoke("EnemyDeath", 1.5f);
+            Debug.Log("Take damage");
         }
         else
         {
@@ -102,7 +103,7 @@ public class EnemyScript : MonoBehaviour
 
     void EnemyDeath()
     {
-        gameManager.SetZombieCount(-1);
+        gameManager.SetEnemyCount(-1);
         Destroy(gameObject);
     }
 

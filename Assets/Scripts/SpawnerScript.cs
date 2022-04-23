@@ -29,19 +29,19 @@ public class SpawnerScript : MonoBehaviour
         timer = Time.time + 7.0f;
         int rnd = Random.Range(0, sprites.Length);
         GetComponent<SpriteRenderer>().sprite = sprites[rnd];
-        gameManager.SetZombieCount(2);
+        gameManager.SetEnemyCount(2);
     }
 
     void Update()
     {
-        if (timer < Time.time && gameManager.GetZombieCount() < gameManager.GetZombieLimit())
+        if (timer < Time.time && gameManager.GetEnemyCount() < gameManager.GetEnemyLimit())
         {
             if (GetComponent<SpriteRenderer>().sprite != gateway)
             {
                 Instantiate(enemyPrefab, spawnPoints[spawnIndex % 2].transform.position, Quaternion.identity);
                 timer = Time.time + 7.0f;
                 spawnIndex++;
-                gameManager.SetZombieCount(1);
+                gameManager.SetEnemyCount(1);
             }
         }
     }
