@@ -22,6 +22,7 @@ public class SpawnerScript : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Instantiate(enemyPrefab, spawnPoints[0].transform.position, Quaternion.identity);
         Instantiate(enemyPrefab, spawnPoints[1].transform.position, Quaternion.identity);
         timer = Time.time + 7.0f;

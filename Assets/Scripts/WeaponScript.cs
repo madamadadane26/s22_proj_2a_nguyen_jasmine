@@ -43,6 +43,7 @@ public class WeaponScript : MonoBehaviour
     void Attack()
     {
         if (player.GetComponent<PlayerScript>().turnedLeft)
+        if (player.GetComponent<PlayerScript>().turnedLeft)
         {
             transform.localScale = new Vector3(-3f, 3f, 1);
             weaponX = -0.7f;

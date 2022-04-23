@@ -2089,7 +2089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &366826019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2974,6 +2974,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 853477912689350298, guid: 7e424fe85f8c79148983bb1a41e75fd8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1928853588154573514, guid: 7e424fe85f8c79148983bb1a41e75fd8, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -7631,7 +7635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -738.2, y: -430.6}
+  m_AnchoredPosition: {x: -684.4, y: -430.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1863047940
@@ -7667,9 +7671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 
 --- !u!222 &1863047941
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7781,7 +7783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1909704451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7864,7 +7866,7 @@ MonoBehaviour:
   healthFill: {fileID: 1692923515}
   mainText: {fileID: 1358074533}
   redOverlay: {fileID: 0}
-  expText: {fileID: 1519102997}
+  expText: {fileID: 1863047940}
 --- !u!212 &1909704455
 SpriteRenderer:
   m_ObjectHideFlags: 0
