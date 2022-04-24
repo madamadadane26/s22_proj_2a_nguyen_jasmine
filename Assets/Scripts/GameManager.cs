@@ -41,6 +41,12 @@ public class GameManager : MonoBehaviour
             level++;
             PrepareSpawners();
         }
+
+        if (scene.name == "MainMenu_Controller")
+        {
+            // Destroy the gameobject this script is attached to
+            Destroy(gameObject);
+        }
     }
 
     void PrepareSpawners()
@@ -86,4 +92,5 @@ public class GameManager : MonoBehaviour
     {
         return level;
     }
+
 }

@@ -8,7 +8,7 @@ public class WeaponScript : MonoBehaviour
     private bool swing = false;
     int degree = 0;
     private float weaponY = -0.2f;
-    private float weaponX = .7f;
+    private float weaponX = 0.7f;
     public float weaponPower = 1.0f;
 
     Vector3 pos;
@@ -43,23 +43,19 @@ public class WeaponScript : MonoBehaviour
     void Attack()
     {
         if (player.GetComponent<PlayerScript>().turnedLeft)
-        if (player.GetComponent<PlayerScript>().turnedLeft)
         {
             transform.localScale = new Vector3(-3f, 3f, 1);
-            weaponX = -0.7f;
+            weaponX = -0.3f;
         }
         else
         {
             transform.localScale = new Vector3(3f, 3f, 1);
-            weaponX = 0.7f;
+            weaponX = 0.3f;
         }
-
         pos = player.transform.position;
         pos.x += weaponX;
         pos.y += weaponY;
         transform.position = pos;
         swing = true;
     }
-
-
 }
