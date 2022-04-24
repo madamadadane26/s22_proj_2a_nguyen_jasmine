@@ -91,6 +91,7 @@ public class BossScript : GameManager
             Debug.Log("Take damage");
             gameManager.LoadLevel();
             GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+
             for (int i = 0; i < GameObjects.Length; i++)
             {
                 Destroy(GameObjects[i]);
