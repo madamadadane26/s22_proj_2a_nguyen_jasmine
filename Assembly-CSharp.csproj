@@ -64,10 +64,11 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\WeaponColliderScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Button_Click_Sound_Play.cs" />
     <Compile Include="Assets\Scripts\SpawnerScript.cs" />
-    <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
+    <Compile Include="Assets\Scripts\BossScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

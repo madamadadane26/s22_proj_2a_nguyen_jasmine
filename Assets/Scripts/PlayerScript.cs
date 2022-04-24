@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : GameManager
 {
     private float horizontal;
     private float vertical;
@@ -20,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     public Text mainText;
     public Image redOverlay;
     public Text expText;
+    public Button retryButton;
 
     private int experience = 0;
 
@@ -30,6 +32,9 @@ public class PlayerScript : MonoBehaviour
         startHealth = health;
         mainText.gameObject.SetActive(false);
         redOverlay.gameObject.SetActive(false);
+        retryButton.gameObject.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -71,17 +76,49 @@ public class PlayerScript : MonoBehaviour
                 mainText.gameObject.SetActive(true);
                 mainText.text = "Game Over";
                 redOverlay.gameObject.SetActive(true);
+                retryButton.gameObject.SetActive(true);
+
             }
             Vector2 temp = new Vector2(healthWidth * (health / startHealth), healthFill.sprite.rect.height);
             healthFill.rectTransform.sizeDelta = temp;
             Invoke("HidePlayerBlood", 0.25f);
         }
 
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            health -= collision.gameObject.GetComponent<BossScript>().GetBossHitStrength();
+            if (health < 1)
+            {
+                healthFill.enabled = false;
+                mainText.gameObject.SetActive(true);
+                mainText.text = "Game Over";
+                redOverlay.gameObject.SetActive(true);
+                retryButton.gameObject.SetActive(true);
+            }
+            Vector2 temp = new Vector2(healthWidth * (health / startHealth), healthFill.sprite.rect.height);
+            healthFill.rectTransform.sizeDelta = temp;
+            Invoke("HidePlayerBlood", 0.25f);
+        }
+
+
     }
+
 
     void HidePlayerBlood()
     {
         transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void retryButtonClick(int sceneID)
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+        for (int i = 0; i < GameObjects.Length; i++)
+        {
+            Destroy(GameObjects[i]);
+        }
     }
 
     public void GainExperience(int amount)

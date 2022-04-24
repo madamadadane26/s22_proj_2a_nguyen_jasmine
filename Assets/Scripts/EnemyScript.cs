@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour
     private float speed = 2.0f;
     private float thrust = 1.5f;
     public float health = 5;
-    private int hitStrength = 10;
+    private int hitStrength = 5;
 
     public Sprite deathSprite;
     public Sprite[] sprites;

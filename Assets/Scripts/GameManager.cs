@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour
     private int level = 0;
     private int currentScene = 0;
     private int enemyCount = 0;
+    private int bossCount = 0;
+
     private int enemyLimit = 10;
+    private int bossLimit = 1;
+
 
     public GameObject player;
     public GameObject weapon;
@@ -63,20 +67,32 @@ public class GameManager : MonoBehaviour
     {
         enemyCount += amount;
     }
-
+    public void SetBossCount(int amount)
+    {
+        bossCount += amount;
+    }
     public int GetEnemyCount()
     {
         return enemyCount;
     }
-
+    public int GetBossCount()
+    {
+        return bossCount;
+    }
     public int GetEnemyLimit()
     {
         return enemyLimit;
     }
 
+    public int GetBossLimit()
+    {
+        return bossLimit;
+    }
+
     public void LoadLevel()
     {
         enemyCount = 0;
+        bossCount = 0;
         if (SceneManager.GetActiveScene().buildIndex != 2)
         {
             currentScene = 1;
