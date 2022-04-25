@@ -15,7 +15,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - VIDEO
   - Water
   - UI
   - 
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: Boss
     uniqueID: 890127781
+    locked: 0
+  - name: VIDEO
+    uniqueID: 2784181705
     locked: 0
