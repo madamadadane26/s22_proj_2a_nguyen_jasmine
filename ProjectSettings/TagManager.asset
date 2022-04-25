@@ -9,6 +9,8 @@ TagManager:
   - Weapon
   - Spawner
   - Boss
+  - SpawnPoint
+  - Door
   layers:
   - Default
   - TransparentFX

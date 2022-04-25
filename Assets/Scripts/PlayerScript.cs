@@ -22,6 +22,11 @@ public class PlayerScript : GameManager
     public Image redOverlay;
     public Text expText;
     public Button retryButton;
+    public Vector3 enter;
+
+    public GameManager gameManager;
+
+
 
     private int experience = 0;
 
@@ -33,6 +38,8 @@ public class PlayerScript : GameManager
         mainText.gameObject.SetActive(false);
         redOverlay.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
+
+        //transform.position = GameManager.Instance.SpawnLocation;
 
 
     }
@@ -127,5 +134,15 @@ public class PlayerScript : GameManager
         expText.text = experience.ToString();
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Door")
+        {
+            GameObject.Find("Controller").GetComponent<Controller>().Respawn();
+            gameManager.LoadLevel();
+            Debug.Log("spawn");
+
+        }
+    }
 
 }

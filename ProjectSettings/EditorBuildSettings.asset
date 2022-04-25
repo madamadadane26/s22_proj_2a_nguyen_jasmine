@@ -21,11 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayGameStart.unity
     guid: 5c6b7d2b1cef14b4585e3ecabc426327
   - enabled: 1
+    path: Assets/Scenes/TownScene.unity
+    guid: 89169a2a452d7f34bbdb68e1641b6d51
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 6c487a22ac9805b42b710982c99e250d
   - enabled: 0
     path: 
-    guid: 961e01970656304429b9a980889db2ef
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 092e55fb544a46c49b36f94ed0049939

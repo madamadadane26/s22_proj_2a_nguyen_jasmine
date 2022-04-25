@@ -14,16 +14,21 @@ public class GameManager : MonoBehaviour
     private int enemyLimit = 10;
     private int bossLimit = 1;
 
+    //public static GameManager Instance;
+    //public Vector3 SpawnLocation = Vector3.zero;
 
     public GameObject player;
     public GameObject weapon;
     public GameObject hudCanvas;
+    public GameObject mainCam;
+    public GameObject controller;
 
     private Scene scene;
 
     void Start()
     {
         PrepareSpawners();
+
     }
 
     void Awake()
@@ -34,9 +39,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(weapon.gameObject);
         DontDestroyOnLoad(hudCanvas.gameObject);
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(mainCam.gameObject);
+        //DontDestroyOnLoad(controller.gameObject);
 
         scene = SceneManager.GetActiveScene();
-    }
+
+
+        }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
