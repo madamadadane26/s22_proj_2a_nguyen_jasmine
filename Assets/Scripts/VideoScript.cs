@@ -9,7 +9,7 @@ public class VideoScript : MonoBehaviour
     private bool movieStarted;
     public VideoPlayer videoPlayer;
 
-    public Text winningText;
+    public Image winningText;
     public Button returnButton;
 
 
@@ -38,7 +38,6 @@ public class VideoScript : MonoBehaviour
     void EndReached(UnityEngine.Video.VideoPlayer videoPlayer)
     {
         winningText.gameObject.SetActive(true);
-        winningText.text = "TheEnd";
         returnButton.gameObject.SetActive(true);
         Debug.Log("video end");
     }

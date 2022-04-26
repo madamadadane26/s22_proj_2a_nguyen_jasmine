@@ -18,7 +18,7 @@ public class PlayerScript : GameManager
     public Image healthFill;
     private float healthWidth;
 
-    public Text mainText;
+    public Image mainText;
     public Image redOverlay;
     public Text expText;
     public Button retryButton;
@@ -81,7 +81,6 @@ public class PlayerScript : GameManager
             {
                 healthFill.enabled = false;
                 mainText.gameObject.SetActive(true);
-                mainText.text = "Game Over";
                 redOverlay.gameObject.SetActive(true);
                 retryButton.gameObject.SetActive(true);
 
@@ -99,7 +98,6 @@ public class PlayerScript : GameManager
             {
                 healthFill.enabled = false;
                 mainText.gameObject.SetActive(true);
-                mainText.text = "Game Over";
                 redOverlay.gameObject.SetActive(true);
                 retryButton.gameObject.SetActive(true);
             }
