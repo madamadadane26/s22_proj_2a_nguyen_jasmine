@@ -24,6 +24,18 @@ public class PlayerScript : GameManager
     public Button retryButton;
     public Vector3 enter;
 
+    public Image dialogBox;
+    public Image dialogBox2;
+
+    public Text dialogTextMC;
+    public Text dialogTextGIRL;
+    public Text dialogTextBOY;
+
+    public Image dialogSpriteMC;
+    public Image dialogSpriteGirl;
+    public Image dialogSpriteGuy;
+
+
     public GameManager gameManager;
 
 
@@ -36,8 +48,22 @@ public class PlayerScript : GameManager
         healthWidth = healthFill.sprite.rect.width;
         startHealth = health;
         mainText.gameObject.SetActive(false);
+
         redOverlay.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
+
+        dialogBox.gameObject.SetActive(false);
+        dialogBox2.gameObject.SetActive(false);
+
+        dialogTextMC.gameObject.SetActive(false);
+        dialogTextGIRL.gameObject.SetActive(false);
+        dialogTextBOY.gameObject.SetActive(false);
+
+        dialogSpriteMC.gameObject.SetActive(false);
+        dialogSpriteGirl.gameObject.SetActive(false);
+        dialogSpriteGuy.gameObject.SetActive(false);
+
+
 
         //transform.position = GameManager.Instance.SpawnLocation;
 
@@ -106,6 +132,37 @@ public class PlayerScript : GameManager
             Invoke("HidePlayerBlood", 0.25f);
         }
 
+        if (collision.gameObject.CompareTag("GIRL"))
+        {
+            Debug.Log("girl talk");
+
+            dialogBox2.gameObject.SetActive(true);
+            dialogTextGIRL.gameObject.SetActive(true);
+            dialogSpriteGirl.gameObject.SetActive(true);
+        }
+        else
+        {
+
+            dialogBox2.gameObject.SetActive(false);
+            dialogTextGIRL.gameObject.SetActive(false);
+            dialogSpriteGirl.gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.CompareTag("BOY"))
+        {
+            Debug.Log("Guy talk");
+
+            dialogBox.gameObject.SetActive(true);
+            dialogTextBOY.gameObject.SetActive(true);
+            dialogSpriteGuy.gameObject.SetActive(true);
+        }
+        else
+        {
+
+            dialogBox.gameObject.SetActive(false);
+            dialogTextBOY.gameObject.SetActive(false);
+            dialogSpriteGuy.gameObject.SetActive(false);
+        }
 
     }
 

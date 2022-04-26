@@ -11,6 +11,8 @@ TagManager:
   - Boss
   - SpawnPoint
   - Door
+  - BOY
+  - GIRL
   layers:
   - Default
   - TransparentFX
