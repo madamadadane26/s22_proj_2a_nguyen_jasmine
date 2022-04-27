@@ -28,7 +28,7 @@ public class Activate : MonoBehaviour
         dialogTextMC.gameObject.SetActive(true);
 
         //Turn the Game Oject back off after sec.
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         //Game object will turn off
         dialogSpriteMC.gameObject.SetActive(false);
