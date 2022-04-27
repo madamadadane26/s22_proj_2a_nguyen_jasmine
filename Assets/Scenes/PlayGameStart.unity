@@ -10190,8 +10190,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'KYRIE: Welcome to the purgatory of the undead! I''m the local shop keeper.
-    You can''t remember anything? You might be able to find them with joss paper
-    parcels!'
+    You can''t remember anything? You might be able to with joss paper parcels!'
 --- !u!222 &1202553715
 CanvasRenderer:
   m_ObjectHideFlags: 0
