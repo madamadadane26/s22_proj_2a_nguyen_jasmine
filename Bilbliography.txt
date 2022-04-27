@@ -1,0 +1,46 @@
+Code referenced from 
+https://kurtkaiser.us/unity-dungeon-crawler-tutorial/
+https://docs.unity3d.com/Manual/index.html
+https://www.youtube.com/watch?v=k4JlFxPcqlg&ab_channel=Unity
+https://www.youtube.com/watch?v=eJFvNx4HLu8&ab_channel=FarazKhanDev
+https://www.youtube.com/watch?v=tfzwyNS1LUY&ab_channel=Hooson
+https://answers.unity.com/questions/1256788/how-can-i-destroy-a-gameobject-after-a-scene-is-lo-2.html
+https://answers.unity.com/questions/341350/how-to-fade-out-a-scene.html
+https://stackoverflow.com/questions/50763955/player-is-not-teleported-correctly-missingreferenceexception
+https://answers.unity.com/questions/896755/enabledisable-game-objects-after-wait-for-seconds.html
+
+
+
+Tilemap from:
+
+https://opengameart.org/content/outdoor-tiles-again
+https://opengameart.org/content/496-pixel-art-icons-for-medievalfantasy-rpg
+https://opengameart.org/content/lpc-plant-repack
+https://opengameart.org/content/lpc-tile-atlas2
+https://opengameart.org/content/16x16-indoor-rpg-tileset-the-baseline
+https://opengameart.org/content/hedgys-swordtember-2020
+https://opengameart.org/content/puddle-corpses
+https://opengameart.org/content/pixel-house-and-fence
+https://opengameart.org/content/top-down-rpg-mockup-scene
+https://opengameart.org/content/rpg-pixel-art-pack
+https://opengameart.org/content/js-saga-style-tileset-2-ascent
+
+Monster sprites: https://opengameart.org/content/dungeon-crawler-tileset
+
+
+Music and Audio from:
+https://opengameart.org/content/button-click-sound-effect-cc0public-domain
+https://opengameart.org/content/jrpg2-piano
+https://opengameart.org/content/jrpg-piano
+https://opengameart.org/content/vampires-piano
+https://opengameart.org/content/piano-5
+https://opengameart.org/content/thoughtful-piano-theme
+https://opengameart.org/content/dungeon-03
+https://opengameart.org/content/rpg-ambience-dungeon
+https://opengameart.org/content/emotional-piano-loop
+https://opengameart.org/content/sad-piano-0
+https://opengameart.org/content/dungeon-03
+
+
+Player Sprite, menu backgrounds, buttons, UI buttons, NPC sprites, pink wisteria tree sprite, ghost sprite, sparkle effect sprite, ending animation, spawner/joss parcel sprite from:
+Jasmine Nguyen.
